@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dip"
+    tools:context=".Asteroides" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dip"
+        android:gravity="center"
+        android:text="@string/main_Titulo"
+        android:textSize="60sp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="550dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="@string/main_b_jugar"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="550dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="@string/main_b_config"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/Button02"
+        android:layout_width="550dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="@string/main_b_about" 
+        android:textSize="40sp"/>
+
+    <Button
+        android:id="@+id/Button03"
+        android:layout_width="550dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="@string/main_b_salir" 
+        android:textSize="40sp" />
+
+</LinearLayout>

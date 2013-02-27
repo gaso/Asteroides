@@ -2,6 +2,7 @@ package co.net.gidsoft.asteroides;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 
 public class Asteroides extends Activity {
@@ -10,6 +11,7 @@ public class Asteroides extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		Log.i("iniciando" , "Aplicion Iniciada");
 	}
 
 	@Override
