@@ -9,5 +9,10 @@
     <string name="main_b_config">Configurar</string>
     <string name="main_b_about">Acerca de</string>
     <string name="main_b_salir">Salir</string>
+    
+    
+    <string name="texto_about">Este programa ha sido desarrollado como ejemplo en el curso de 
+    Android para demostrar cómo se pueden lanzar nuevas actividades desde 
+    la actividad principal. tel:3116028895 </string>
 
 </resources>

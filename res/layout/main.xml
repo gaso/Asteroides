@@ -25,24 +25,27 @@
         android:text="@string/main_b_jugar" />
 
     <Button
-        android:id="@+id/Button01"
+        android:id="@+id/bConfigurar"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:text="@string/main_b_config" />
+        android:text="@string/main_b_config" 
+        android:onClick="lanzarPreferencias"/>
 
     <Button
-        android:id="@+id/Button02"
+        android:id="@+id/bAcercaDe"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
+        android:onClick="lanzarAcerceDe"
         android:text="@string/main_b_about" />
 
     <Button
-        android:id="@+id/Button03"
+        android:id="@+id/bSalir"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:text="@string/main_b_salir" />
+        android:text="@string/main_b_salir" 
+        android:onClick="salir"/>
 
 </LinearLayout>

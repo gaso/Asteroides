@@ -26,7 +26,7 @@
         android:textSize="40sp" />
 
     <Button
-        android:id="@+id/Button01"
+        android:id="@+id/bConfigurar"
         android:layout_width="550dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -34,7 +34,7 @@
         android:textSize="40sp" />
 
     <Button
-        android:id="@+id/Button02"
+        android:id="@+id/bAcercaDe"
         android:layout_width="550dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -42,7 +42,7 @@
         android:textSize="40sp"/>
 
     <Button
-        android:id="@+id/Button03"
+        android:id="@+id/bSalir"
         android:layout_width="550dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"
