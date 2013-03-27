@@ -2,7 +2,6 @@ package co.net.gidsoft.asteroides;
 
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 
 public class Puntuaciones extends ListActivity {
 
@@ -16,16 +15,34 @@ public class Puntuaciones extends ListActivity {
 //				Asteroides.almacen.listaPuntuaciones(10)));
 //	}
 	
+//Lista con Imagenes y View Personalizada	
+//	@Override
+//	public void onCreate(Bundle savedInstanceState) {
+//		super.onCreate(savedInstanceState);
+//		setContentView(R.layout.puntuaciones);
+//		 setListAdapter(
+//                 new ArrayAdapter<String>(this,
+//                       R.layout.elemento_lista,
+//                 R.id.titulo,
+//                       Asteroides.almacen.listaPuntuaciones(10)));
+//	}
+	
+	/**
+	 * NOTA:
+	 * ============
+	 * En algunos casos el adaptador ha de trabajar con listas muy grandes o 
+	 *  estas listas han de ser creadas desde un servidor. 
+	 *  En estos casos es mejor ir solicitando la información a 
+	 *  medida que se va representando. Un ejemplo se muestra en la aplicación 
+	 *  ApiDemos descrita en el capítulo 1, en la actividad:
+	 *  com.example.android.apis.view.List13 
+	 */
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.puntuaciones);
-		 setListAdapter(
-                 new ArrayAdapter<String>(this,
-                       R.layout.elemento_lista,
-                 R.id.titulo,
-                       Asteroides.almacen.listaPuntuaciones(10)));
+		 setListAdapter(new MiAdaptador(this, Asteroides.almacen.listaPuntuaciones(10))  );
 	}
 
 }
