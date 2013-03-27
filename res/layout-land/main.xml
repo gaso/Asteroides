@@ -58,11 +58,12 @@
                 android:text="@string/main_b_about" />
 
             <Button
-                android:id="@+id/bSalir"
+                android:id="@+id/bPuntuacion"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="@string/main_b_salir" />
+                android:text="@string/main_b_salir" 
+                android:onClick="lanzarPuntuaciones"/>
         </TableRow>
 
     </TableLayout>

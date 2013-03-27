@@ -42,7 +42,7 @@
         android:textSize="40sp"/>
 
     <Button
-        android:id="@+id/bSalir"
+        android:id="@+id/bPuntuacion"
         android:layout_width="550dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"

@@ -8,6 +8,6 @@
     <string name="main_b_jugar">Play</string>
     <string name="main_b_config">Configuration</string>
     <string name="main_b_about">About</string>
-    <string name="main_b_salir">Exit</string>
+    <string name="main_b_salir">Score</string>
 
 </resources>
