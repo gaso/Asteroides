@@ -18,7 +18,7 @@
         android:textSize="60sp" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/bJugar"
         android:layout_width="550dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"

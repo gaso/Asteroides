@@ -91,6 +91,12 @@ public class Asteroides extends Activity {
 		startActivity(i);
 	}
 	
+	public void lanzarJuego(View view) {
+		Intent i = new Intent(this, Juego.class);
+		startActivity(i);
+	}
+	
+	
 	private void configGame(Intent data){
 				
 		sys_music = data.getExtras().getBoolean("musica");

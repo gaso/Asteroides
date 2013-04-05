@@ -18,11 +18,12 @@
         android:textSize="25sp" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/bJugar"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:text="@string/main_b_jugar" />
+        android:text="@string/main_b_jugar" 
+        android:onClick="lanzarJuego"/>
 
     <Button
         android:id="@+id/bConfigurar"

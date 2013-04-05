@@ -26,6 +26,7 @@
         <activity android:name=".AcercaDe" android:label="Acerca de ..." android:theme="@android:style/Theme.Dialog" />
         <activity android:name="co.net.gidsoft.asteroides.Preferencias" android:label="Preferencias" />
        	<activity android:name="co.net.gidsoft.asteroides.Puntuaciones" android:label="Puntuaciones" />
+       	<activity android:name="co.net.gidsoft.asteroides.Juego" android:label="Juego" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
     </application>
 
 </manifest>
