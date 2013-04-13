@@ -98,9 +98,7 @@ public class Grafico {
 	}
 
 	public boolean verificaColision(Grafico g) {
-
 		return (distancia(g) < (radioColision + g.radioColision));
-
 	}
 
 	public Drawable getDrawable() {
@@ -190,7 +188,11 @@ public class Grafico {
 	public void setView(View view) {
 		this.view = view;
 	}
+
+	public static int getMaxVelocidad() {
+		return MAX_VELOCIDAD;
+	}
 	
-	
+	 
 	
 }
