@@ -15,6 +15,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -55,7 +56,9 @@ public class VistaJuego extends View implements SensorEventListener {
 	private static int PASO_VELOCIDAD_MISIL = 12;
 	private boolean misilActivo = false;
 	private int tiempoMisil;
-
+	
+	SensorManager mSensorManager;
+	
 	public VistaJuego(Context context, AttributeSet attrs) {
 
 		super(context, attrs);
@@ -92,8 +95,22 @@ public class VistaJuego extends View implements SensorEventListener {
 
 		}
 
-		SensorManager mSensorManager = (SensorManager) context
+		mSensorManager = (SensorManager) context
 				.getSystemService(Context.SENSOR_SERVICE);
+		enableSensors();
+
+	}
+	
+	
+	
+	//Desactivar Sensores cuando este en segundo Plano
+	public void disableSensors(){
+		mSensorManager.unregisterListener(this);
+	}
+	
+	//Activar Sensores cuando obtenga el foco
+	public void enableSensors(){
+
 		List<Sensor> listSensors = mSensorManager
 				.getSensorList(Sensor.TYPE_ORIENTATION);
 		if (!listSensors.isEmpty()) {
@@ -101,8 +118,8 @@ public class VistaJuego extends View implements SensorEventListener {
 			mSensorManager.registerListener(this, orientationSensor,
 					SensorManager.SENSOR_DELAY_GAME);
 		}
-
 	}
+		
 
 	@Override
 	protected void onSizeChanged(int ancho, int alto, int ancho_anter,
@@ -191,11 +208,42 @@ public class VistaJuego extends View implements SensorEventListener {
 
 	}
 
+	public ThreadJuego getThread() {
+		return thread;
+	}
+
 	class ThreadJuego extends Thread {
+		private boolean pausa, corriendo;
+
+		public synchronized void pausar() {
+			pausa = true;
+		}
+
+		public synchronized void reanudar() {
+			pausa = false;
+			notify();
+		}
+
+		public void detener() {
+			corriendo = false;
+			if (pausa)
+				reanudar();
+		}
+
 		@Override
 		public void run() {
-			while (true) {
+			corriendo = true;
+			while (corriendo) {
 				actualizaFisica();
+				synchronized (this) {
+					while (pausa) {
+						try {
+							wait();
+						} catch (Exception e) {
+							Log.e("Error RUN", "Error en Vista Juego Thead");
+						}
+					}
+				}
 			}
 		}
 	}
@@ -273,4 +321,6 @@ public class VistaJuego extends View implements SensorEventListener {
 
 	}
 
+	
+	
 }
